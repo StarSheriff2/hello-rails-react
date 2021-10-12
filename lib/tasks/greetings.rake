@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 namespace :greetings do
   desc 'Seeds messages'
   task seed_messages: :environment do

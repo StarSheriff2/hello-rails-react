@@ -1,6 +1,6 @@
 class V1::GreetingsController < ApplicationController
   def index
-    render json: { :greetings => [
+    render json: { greetings: [
       {
         message: 'Whats up'
       },
@@ -9,9 +9,8 @@ class V1::GreetingsController < ApplicationController
       }
     ] }.to_json
   end
+
   def hello
     @greeting = Greeting.find(Greeting.pluck(:id).sample)
-
-
   end
 end
