@@ -5,6 +5,9 @@ import {
   Route,
 } from 'react-router-dom';
 
+import { Provider } from 'react-redux';
+import store from '../redux/configureStore';
+
 import Hello from './Hello';
 
 const App = () => (
@@ -12,8 +15,8 @@ const App = () => (
     <Provider store={store}>
       <Router>
         <Switch>
-          <Route exact path="/" render={() => { 'Home!'; }} />
-          <Route path="/hello" render={() => <Hello greeting="Friend" />} />
+          {/* <Route exact path="/" render={() => { 'Home!'; }} /> */}
+          <Route exact path="/" render={() => <Hello />} />
         </Switch>
       </Router>
     </Provider>

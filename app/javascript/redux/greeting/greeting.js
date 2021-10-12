@@ -25,15 +25,15 @@ export const getGreetingFailed = (payload) => ({
   payload,
 });
 
-// export const fetchGniWorld = () => async (dispatch) => {
-//   dispatch(getGniWorldStarted());
-//   try {
-//     const data = await (await fetch(baseURL, {})).json();
-//     dispatch(getGniWorldSuccess(data[1]));
-//   } catch (err) {
-//     dispatch(getGniWorldFailed(err.toString()));
-//   }
-// };
+export const fetchGreeting = () => async (dispatch) => {
+  dispatch(getGreetingStarted());
+  try {
+    const data = await (await fetch(baseURL, {})).json();
+    dispatch(getGniWorldSuccess(data[1]));
+  } catch (err) {
+    dispatch(getGniWorldFailed(err.toString()));
+  }
+};
 
 // Reducer
 const reducer = (state = initialState, action) => {
