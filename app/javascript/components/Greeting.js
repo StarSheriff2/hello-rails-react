@@ -14,8 +14,7 @@ const Greeting = () => {
   return (
     <>
       <h1>
-        Greeting:
-        {greeting}
+        Greeting: {greeting}
       </h1>
     </>
   );
