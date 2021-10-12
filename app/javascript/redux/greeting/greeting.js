@@ -1,7 +1,7 @@
 // Actions
 const FETCH_STARTED = 'hello-rails-react/app/javascript/redux/greeting/FETCH_STARTED';
 const FETCH_SUCCEDED = 'hello-rails-react/app/javascript/redux/greeting/FETCH_SUCCEDED';
-const FETCH_FAILED = 'hello-rails-react/app/javascript/redux/greeting/GNI_WORLD_FAILED';
+const FETCH_FAILED = 'hello-rails-react/app/javascript/redux/greeting/FETCH_FAILED';
 
 // Initial State
 
@@ -28,10 +28,10 @@ export const getGreetingFailed = (payload) => ({
 export const fetchGreeting = () => async (dispatch) => {
   dispatch(getGreetingStarted());
   try {
-    const data = await (await fetch(baseURL, {})).json();
-    dispatch(getGniWorldSuccess(data[1]));
+    const data = await (await fetch('v1/random-greeting.json')).json();
+    dispatch(getGreetingSuccess(data.message));
   } catch (err) {
-    dispatch(getGniWorldFailed(err.toString()));
+    dispatch(getGreetingFailed(err.toString()));
   }
 };
 
@@ -45,7 +45,7 @@ const reducer = (state = initialState, action) => {
       };
     case FETCH_SUCCEDED: {
       return {
-        entities: action.payload,
+        message: action.payload,
         status: 'idle',
       };
     }
