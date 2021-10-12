@@ -80,6 +80,12 @@ You are all set now!
 
 **Note:<br>_ These commands will not stop on their own. If you change something in your project files, it will recompile and reload the page in your browser. To exit, hit "ctrl + c"_**
 
+## Linters
+To run the linters included in this repository, go to the root directory of your repository and copy/paste the following commands into your terminal:
+(**Note:** Make sure you run `npm install` before you do this)
+- for ESlint, `npx eslint <path of file>`
+- for Rubocop, `rubocop .`
+
 ## Author
 👤 **Arturo Alvarez**
 - Github: [@StarSheriff2](https://github.com/StarSheriff2)
@@ -98,9 +104,3 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](https://github.com/StarSheriff2/hello-rails-react/blob/development/LICENSE) licensed.
-
-### Linters
-To run the linters included in this repository, go to the root directory of your repository and copy/paste the following commands into your terminal:
-(**Note:** Make sure you run `npm install` before you do this)
-- for ESlint, `npx eslint <path of file>`
-- for Rubocop, `rubocop .`
