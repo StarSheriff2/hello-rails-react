@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { fetchGreeting } from '../redux/greeting/greeting';
 
-const Hello = () => {
+const Greeting = () => {
   const dispatch = useDispatch();
 
   const greeting = useSelector((state) => state.greeting.message );
@@ -19,8 +19,4 @@ const Hello = () => {
   );
 }
 
-Hello.propTypes = {
-  greeting: PropTypes.string,
-};
-
-export default Hello;
+export default Greeting;

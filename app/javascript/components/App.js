@@ -8,15 +8,14 @@ import {
 import { Provider } from 'react-redux';
 import store from '../redux/configureStore';
 
-import Hello from './Hello';
+import Greeting from './Greeting';
 
 const App = () => (
   <>
     <Provider store={store}>
       <Router>
         <Switch>
-          {/* <Route exact path="/" render={() => { 'Home!'; }} /> */}
-          <Route exact path="/" render={() => <Hello />} />
+          <Route exact path="/" render={() => <Greeting />} />
         </Switch>
       </Router>
     </Provider>
