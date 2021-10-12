@@ -10,6 +10,8 @@ class V1::GreetingsController < ApplicationController
     ] }.to_json
   end
   def hello
+    @greeting = Greeting.find(Greeting.pluck(:id).sample)
+
 
   end
 end
