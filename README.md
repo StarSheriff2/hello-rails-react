@@ -77,6 +77,7 @@ You are all set now!
 1. In your terminal, run <code>bin/rails server</code> while inside the root directory of the repository files
 2. Go to your browser of choice and enter this URL: [http://localhost:3000](http://localhost:3000)
 3. \[Optional\] if you want to make changes to the JavaScript file and see changes immediately, run `./bin/webpack-dev-server`
+4. Refresh the page to see a different greeting message! 😸
 
 **Note:<br>_ These commands will not stop on their own. If you change something in your project files, it will recompile and reload the page in your browser. To exit, hit "ctrl + c"_**
 
