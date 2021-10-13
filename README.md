@@ -24,6 +24,10 @@ This app shows a different greeting message when you refresh the page. It uses r
 
 API calls are made directly from the component to the Rails API endpoint.
 
+### Live Demo
+
+Deployed to Heroku: [Live Demo](https://shrouded-tor-79384.herokuapp.com/#/)
+
 ### Built With
 - HTML, CSS, JavaScript (ES6)
 - Ruby 3.0.1p64 (2021-04-05 revision 0fb782ee38) [arm64-darwin20]
@@ -67,7 +71,7 @@ To get a local copy up and running, follow these simple example steps.
 2. While in the project root directory, type `bundle install`. This command will install all the necessary gems in your system.
 3. Then you can type <code>yarn install --check-files</code>.
 
-#### Database Setup
+### Database Setup
 
 - In your terminal, while in the root dir of your Rails project, type <code>bin/rails db:setup</code> to create your local databases, load the schema, and initialize with the seed data.
 
